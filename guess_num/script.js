@@ -24,12 +24,11 @@ document.querySelector('.check').addEventListener(
       document.querySelector('.question').textContent = secretNumber;
       document.querySelector('.question').style.width = '40rem';
       document.querySelector('.question').style.fontSize = '8rem';
+      if (score > hightScore) {
+        hightScore = score;
+        document.querySelector('.highscore').textContent = hightScore;
+      }
     }
-    if (score > hightScore) {
-      hightScore = score;
-      document.querySelector('.highscore').textContent = hightScore;
-    }
-
     // Если число больше или меньше
     else if (quessingNumber !== secretNumber) {
       if (score > 1) {
